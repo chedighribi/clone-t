@@ -93,9 +93,20 @@ class MyHomePage extends StatelessWidget {
                             ]
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
+                  Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Répondre"),
+                        Text("Retweet"),
+                        Text("Favoris"),
+                      ],
+                    ),
+                  )
                 ],
               ),
               
