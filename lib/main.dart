@@ -1,3 +1,5 @@
+import 'package:demo/footer.dart';
+import 'package:demo/header.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,28 +22,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HeaderButton extends StatelessWidget {
 
-  String libelle;
-  TextAlign align;
-  HeaderButton(this.libelle, {this.align = TextAlign.center });
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(child: Text(libelle, textAlign: this.align, style: TextStyle(color: Colors.white),));
-  }
-}
-
-class FooterButton extends StatelessWidget {
-
-  String libelle;
-  FooterButton(this.libelle);
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(child: Text(libelle, textAlign: TextAlign.center));
-  }
-}
 
 class MyHomePage extends StatelessWidget {
   @override
@@ -52,20 +33,7 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // Header
-          Container(
-            color: Color(0XFF5880F0),
-            child: Padding(
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                children: [
-                  HeaderButton('Nouveau', align: TextAlign.right),
-                  HeaderButton('Accueil'),
-                  HeaderButton('Footer', align: TextAlign.left),
-                ],
-              ),
-            ),
-          ),
+          HeaderWidget(),
           // Main
           Expanded(
             child: Container(
@@ -112,21 +80,7 @@ class MyHomePage extends StatelessWidget {
               
             ),
           ),
-          // Footer
-          Container(
-            color: Color(0XFF5880F0),
-            child: Padding(
-              padding: const EdgeInsets.all(10),
-              child: Row(
-                children: [
-                  FooterButton('Fil'),
-                  FooterButton('Notification'),
-                  FooterButton('Message'),
-                  FooterButton('Moi'),
-                ],
-              ),
-            ),
-          )
+          FooterWidget()
         ],
       )
     );
