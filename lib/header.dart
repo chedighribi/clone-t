@@ -5,11 +5,19 @@ class HeaderButton extends StatelessWidget {
 
   String libelle;
   TextAlign align;
-  HeaderButton(this.libelle, {this.align = TextAlign.center });
+  String? imgPath;
+  HeaderButton(this.libelle, {this.align = TextAlign.center, this.imgPath });
+  
+  Widget selectButtonWidget() {
+    if (imgPath != null) {
+      return IconButton(onPressed: () {}, icon: Image.asset(this.imgPath!));
+    }
+    return Text(libelle, textAlign: this.align, style: TextStyle(color: Colors.white),);
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(child: Text(libelle, textAlign: this.align, style: TextStyle(color: Colors.white),));
+    return Expanded(child: selectButtonWidget());
   }
 }
 
@@ -23,9 +31,9 @@ class HeaderWidget extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: Row(
             children: [
-              HeaderButton('Nouveau', align: TextAlign.right),
+              HeaderButton('Nouveau', align: TextAlign.right, imgPath: "assets/pencil.png"),
               HeaderButton('Accueil'),
-              HeaderButton('Footer', align: TextAlign.left),
+              HeaderButton('Rechercher', align: TextAlign.left, imgPath: "assets/search.png"),
             ],
           ),
         ),
