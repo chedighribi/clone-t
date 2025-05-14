@@ -1,5 +1,6 @@
 import 'package:demo/footer.dart';
 import 'package:demo/card.dart';
+import 'package:demo/form.dart';
 import 'package:demo/header.dart';
 import 'package:flutter/material.dart';
 
@@ -37,8 +38,11 @@ class MyHomePage extends StatelessWidget {
           HeaderWidget(),
           // Main
           Expanded(
-            child: Container(
-              child: CardSocial(),
+            child: Column(
+              children: [
+                FormLogin(),
+                CardSocial()
+              ],
             ),
           ),
           FooterWidget()
