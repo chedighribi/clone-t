@@ -10,7 +10,7 @@ class HeaderButton extends StatelessWidget {
   
   Widget selectButtonWidget() {
     if (imgPath != null) {
-      return IconButton(onPressed: () {}, icon: Image.asset(this.imgPath!));
+      return IconButton(onPressed: () {}, icon: Image.asset(this.imgPath!, height: 20));
     }
     return Text(libelle, textAlign: this.align, style: TextStyle(color: Colors.white),);
   }

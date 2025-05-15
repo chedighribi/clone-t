@@ -38,9 +38,9 @@ class CardSocial extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Répondre"),
-              Text("Retweet"),
-              Text("Favoris"),
+              IconButton(onPressed:() {}, icon: Image.asset("assets/reply.png", height: 20)),
+              IconButton(onPressed:() {}, icon: Image.asset("assets/retweet.png", height: 20)),
+              IconButton(onPressed:() {}, icon: Image.asset("assets/favorite.png", height: 20)),
             ],
           ),
         )
