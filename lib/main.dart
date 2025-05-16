@@ -2,6 +2,7 @@ import 'package:demo/footer.dart';
 import 'package:demo/card.dart';
 import 'package:demo/form.dart';
 import 'package:demo/header.dart';
+import 'package:demo/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +20,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
-      home: MyHomePage(),
+      initialRoute: '/',
+      routes: {
+        "/": (context) => LoginPage(),
+        "/home-page": (context) => MyHomePage()
+      },
     );
   }
 }
@@ -40,7 +45,6 @@ class MyHomePage extends StatelessWidget {
           Expanded(
             child: Column(
               children: [
-                FormLogin(),
                 CardSocial()
               ],
             ),

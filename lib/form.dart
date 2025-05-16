@@ -9,7 +9,7 @@ class _FormLoginState extends State<FormLogin> {
   var _formKey = GlobalKey<FormState>();
   void onSubmit(){
       if (_formKey.currentState!.validate()) {
-        print("Connexion avec succés");
+        Navigator.pushNamed(context, "/home-page");
       }
   }
 
