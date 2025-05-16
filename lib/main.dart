@@ -1,3 +1,4 @@
+import 'package:demo/feedList.dart';
 import 'package:demo/footer.dart';
 import 'package:demo/card.dart';
 import 'package:demo/form.dart';
@@ -43,12 +44,9 @@ class MyHomePage extends StatelessWidget {
           HeaderWidget(),
           // Main
           Expanded(
-            child: Column(
-              children: [
-                CardSocial()
-              ],
+              child:
+                FeedListWidget()
             ),
-          ),
           FooterWidget()
         ],
       )

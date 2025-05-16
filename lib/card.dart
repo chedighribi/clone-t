@@ -2,7 +2,11 @@
 
 import 'package:flutter/material.dart';
 
+import 'feedList.dart';
+
 class CardSocial extends StatelessWidget {
+  Post post;
+  CardSocial(this.post);
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +26,11 @@ class CardSocial extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("pseudo"),
+                          Text(post.author),
                           Text("5 min"),
                         ],
                       ),
-                      Text("ici commentaire ici commentaire ici commentaire ici commentaire ici commentaire ici commentaire ici commentaire ici commentaire ici commentaire ici commentaire ici commentaire ici commentaire ")
+                      Text(post.message)
                     ]
                 ),
               ),
